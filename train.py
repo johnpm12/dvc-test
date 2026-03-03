@@ -23,7 +23,7 @@ def main():
     # Save a tiny metrics file
     acc = model.score(X_test, y_test)
     metrics = {"accuracy": float(acc)}
-    with open(os.path.join("app","artifacts", "metrics.json"), "w") as f:
+    with open(os.path.join("artifacts", "metrics.json"), "w") as f:
         json.dump(metrics, f)
 
     print(f"Saved model to {model_path}")
